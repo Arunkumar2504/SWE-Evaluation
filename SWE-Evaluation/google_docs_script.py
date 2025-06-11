@@ -65,7 +65,7 @@ def share_doc(drive_service, doc_id, emails):
         drive_service.permissions().create(
             fileId=doc_id,
             body=permission,
-            sendNotificationEmail=False
+            sendNotificationEmail=True
         ).execute()
     print(f"🔗 Document shared with: {', '.join(emails)}")
 
